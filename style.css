@@ -496,6 +496,23 @@ body.light{
     background-size: cover;
 }
 
+/*Cover-Img---------------------------------------------------------------------------------*/
+
+.cover-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+}
+
+.cover-img img{
+    width: 80%;
+    height: auto;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.64);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.64);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.64);
+}
 /*Projects---------------------------------------------------------------------------------*/
 
 .projects{
@@ -533,19 +550,15 @@ input { cursor: pointer; }
     height: 70px;
 }
 
-.projCardDiv{
-
-    display: flex;
-}
 
 .projCardDiv1{
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
 
 .projCardDiv2{
     display: flex;
-    align-items: end;
+    justify-content: end;
 }
 
 /* this element will float */
@@ -701,8 +714,8 @@ input { cursor: pointer; }
 }
 
 .card-img-top{
-    height: 700px;
-    width: 200px;
+    height: 280px;
+    width: 350px;
 }
 
 .text1{
@@ -719,22 +732,22 @@ input { cursor: pointer; }
 }
 
 #card1-img img{
-    height: 88vh;
+    height: 48vh;
     width: auto;
 }
 
 #card2-img img{
-    height: 58vh;
+    height: 28vh;
     width: auto;
 }
 
 #card3-img img{
-    height: 58vh;
+    height: 28vh;
     width: auto;
 }
 
 #card4-img img{
-    height: 58vh;
+    height: 28vh;
     width: auto;
 }
 
