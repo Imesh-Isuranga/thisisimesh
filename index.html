@@ -37,7 +37,7 @@
                     <a class="nav-link" href="#AboutMe">About</a>
                 </li>
                 <li class="context nav-item">
-                    <a class="nav-link" href="#Projects">Projects</a>
+                    <a class="nav-link" href="#tasks">Projects</a>
                 </li>
                 <li class="context nav-item">
                     <a class="nav-link" href="https://medium.com/@imeshisuranga00">Blog</a>
@@ -280,20 +280,139 @@
 
 
 <!--Projects--------------------------------------------------------------------------------->
-<div id="Projects" class="row projects">
-    <div class="projects-left col-12 col-sm-12 col-md-5 col-lg-5">
-        <p class="context" id="projectsTitle">Projects</p>
-        <p class="context reveal" id="description">
+<div id="projects" class="row projects">
+    <p class="context" id="projectsTitle">Projects</p>
+
+    <div class="projCardDiv col-12 col-sm-12 col-md-12 col-lg-12 projCardDiv1">
+        <div class="card text-white bg-secondary col-12 col-sm-12 col-md-8 col-lg-8 projCard1">
+            <div class="card-header"><h4>Project 1</h4></div>
+            <div class="card-body">
+                <h5 class="card-title">StressDucer</h5>
+                <p class="card-text">StressDucer is a mobile application developed myself designed to help users reduce their stress levels effectively. This app provides various features to assist students in managing their time efficiently and minimizing stress. Especially ...</p>
+            </div>
+            <input type="button" id="btClick1" class="btClickHere" value="see more.." />
+        </div>
+    </div>
+
+    <div class="spacediv"></div>
+
+
+    <div class="projCardDiv col-12 col-sm-12 col-md-12 col-lg-12 projCardDiv2">
+        <div class="card text-white bg-secondary col-12 col-sm-12 col-md-8 col-lg-8 projCard2">
+            <div class="card-header"><h4>Project 2</h4></div>
+            <div class="card-body">
+                <h5 class="card-title">Mixed Reality Simulation Platform for SWARM Robotics</h5>
+                <p class="card-text">This project is about a Mixed Reality Simulation Platform for SWARM Robotics. This platform merges the physical and the virtual reality and allows us to run SWARM behavioral experiments using robots ...</p>
+            </div>
+            <input type="button" id="btClick2" class="btClickHere" value="see more.." />
+        </div>
+    </div>
+
+    <div class="spacediv"></div>
+
+    <div class="projCardDiv col-12 col-sm-12 col-md-12 col-lg-12 projCardDiv1">
+        <div class="card text-white bg-secondary col-12 col-sm-12 col-md-8 col-lg-8 projCard1">
+            <div class="card-header"><h4>Project 3</h4></div>
+            <div class="card-body">
+                <h5 class="card-title">Virtual Gait</h5>
+                <p class="card-text">In this study, we propose a novel approach utilizing an apparatus that enables users to walk in
+                    place while supported by a support rig, coupled with inertial measurement unit (IMU) sensors at
+                    the feet to capture locomotion ...</p>
+            </div>
+            <input type="button" id="btClick3" class="btClickHere" value="see more.." />
+        </div>
+    </div>
+
+</div>
+
+<div id="proj1" class="proj">
+        <!-- the element which will float at the center of the screen -->
+    <div class="divFloat">
+        <input type="button" id="btClose1" class="btClose" value="Close (x)" />
+        <br><br>
+        <p>StressDucer is a mobile application developed myself designed to help users reduce their stress levels effectively. This app provides various features to assist students in managing their time efficiently and minimizing stress. Especially created for university students to reduce stress by using auto-generated timetables and more. Also using this you will be able to test your stress level as well.</p>
+        <p>I developed this app for two months. I got a lot of advice from different people like doctors, and lecturers as well. Also, I collected data from my friends who have more stress than normal people.</p>
+        <p>So I think this app will help every student who has stress. I hope to develop the feature of a generating timetable in the future. That feature was developed using my algorithm. Most of the time of developing this app was spent thinking about how to generate the timetable. I think this timetable gives you a more efficient timetable.</p>
+        <br>
+        <h3>Skills</h3>
+        <p><b>Programming</b>  |  <b>Time Management</b>  |  <b>Flutter</b>  |  <b>Mobile Applications</b>  |  <b>Software Engineering Practices</b></p>
+        <a href="https://github.com/Imesh-Isuranga/StressDucer">GitHub</a>
+        <br><br>
+        <div class="row main-proj-img">
+            <div class="proj-img-div col-6 col-sm-4 col-md-4 col-lg-4"><img class="proj-img" src="assets/Projects_assets/screenshot1.jpeg" alt=""></div>
+            <div class="proj-img-div col-6 col-sm-4 col-md-4 col-lg-4"><img class="proj-img" src="assets/Projects_assets/screenshot2.jpeg" alt=""></div>
+            <div class="proj-img-div col-6 col-sm-4 col-md-4 col-lg-4"><img class="proj-img" src="assets/Projects_assets/screenshot3.jpeg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<div id="proj2" class="proj">
+    <!-- the element which will float at the center of the screen -->
+    <div class="divFloat">
+        <input type="button" id="btClose2" class="btClose" value="Close (x)" />
+        <br><br>
+        <p>This project is about a Mixed Reality Simulation Platform for SWARM Robotics. This platform merges the physical and the virtual reality and allows us to run SWARM behavioral experiments using robots in both realities in the same environment. This system consists of five main components, which are physical robots, virtual robots, the localization system, the visualizer, and the SWARM simulator. </p>
+        <p>I was responsible for implementing the Java-based Virtual Robot, creating virtual robots that behave like their physical counterparts. This involved developing communication features, building interaction with the simulator, and managing sensor data. My contributions included setting up the Java environment, creating installation guides, and ensuring seamless integration with other system components. I fully developed the Maze following the robot class. Here I programmed a robot to figure out the right path and navigate the maze environment.</p>
+        <p>The robot firmware was implemented to support swarm behavioral implementations. It interacts with various sensors and functionalities while communicating with the simulator and other components in near real-time. </p>
+        <br>
+        <h3>Skills</h3>
+        <p><b>java</b>  |  <b>Spring Boot</b>  |  <b>Management</b>  |  <b>Communication</b>  |  <b>Mqtt</b>  |  <b>Software Documentation</b>  |  <b>Problem Solving</b></p>
+        <a href="https://github.com/Pera-Swarm/java-robot">GitHub</a>
+        <a href="https://pera-swarm.ce.pdn.ac.lk/docs/">Pera Swarm Documentation</a>
+        <br><br>
+        <div class="row main-proj-img">
+            <div class="proj-img-div col-6 col-sm-4 col-md-4 col-lg-4"><img class="proj-img" src="assets/Projects_assets/2.jpeg" alt=""></div>
+            <div class="proj-img-div col-6 col-sm-4 col-md-4 col-lg-4"><img class="proj-img" src="assets/Projects_assets/2.jpeg" alt=""></div>
+            <div class="proj-img-div col-6 col-sm-4 col-md-4 col-lg-4"><img class="proj-img" src="assets/Projects_assets/3.jpeg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<div id="proj3" class="proj">
+    <!-- the element which will float at the center of the screen -->
+    <div class="divFloat">
+        <input type="button" id="btClose3" class="btClose" value="Close (x)" />
+        <br><br>
+        <p>In this study, we propose a novel approach utilizing an apparatus that enables users to walk in
+            place while supported by a support rig, coupled with inertial measurement unit (IMU) sensors at
+            the feet to capture locomotion data. Our research focuses on analyzing the gait patterns of
+            users during locomotion and employing Long Short-Term Memory (LSTM) networks, a
+            specialized form of Recurrent Neural Networks (RNNs), to classify different types of locomotion,
+            including walking, running, turning, and reversing.</p>
+        <br>
+        <h3>Skills</h3>
+        <p><b>Augmented Reality (AR)</b>  |  <b>Virtual Reality(VR)</b>  |  <b>Time Management</b>  |  <b>Machine Learning</b>  |  <b>Artificial Intelligence(AI)</b>  |  <b>Flutter</b>  |  <b>Mechanical Engineering</b></p>
+        <a href="assets/Projects_assets/IET%20conference%20Abstract.pdf">IET conference Abstract</a>
+        <br>
+        <a href="assets/Projects_assets/FinalAssembly.pdf">Final Assembly</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--Tasks--------------------------------------------------------------------------------->
+<div id="tasks" class="row tasks">
+    <div class="tasks-left col-12 col-sm-12 col-md-5 col-lg-5">
+        <p class="context" id="tasksTitle">Projects</p>
+        <p class="context reveal" id="tasksDescription">
             In my portfolio, you'll find a diverse range of projects showcasing my expertise in <span style="background-color:crimson;color:yellow"><b>mobile app development, software development, and website design</b></span>.
             <br><br>
             From innovative mobile apps to robust software solutions, my projects reflect a commitment to solving real-world problems using cutting-edge technology. Really I have tried to use Artificial intelligence and machine learning techniques in my project to enhance performance and effectiveness.
         </p>
     </div>
-    <div class="projects-right col-12 col-sm-12 col-md-7 col-lg-7">
-        <div class="preview-projects"></div>
+    <div class="tasks-right col-12 col-sm-12 col-md-7 col-lg-7">
+        <div class="preview-tasks"></div>
     </div>
-    <div class="row project-1">
-        <!--project-1------------------------------------------------->
+    <div class="row tasks-1">
+        <!--tasks-1------------------------------------------------->
         <div class="col align-self-start row common proj-1 revealProductstoLeft">
             <div class="project-1-img  col-12 col-sm-12 col-md-4 col-lg-4" style="margin-bottom: 10px">
                 <div id="card1-img" class="card1-img">
@@ -336,7 +455,7 @@
             </div>
         </div>
 
-        <!--project-2------------------------------------------------->
+        <!--tasks-2------------------------------------------------->
         <div class="col align-self-end row common proj-2 revealProductstoRight">
             <div class="project-1-img  col-12 col-sm-12 col-md-8 col-lg-8" style="margin-bottom: 10px">
                 <div id="card2-img" class="card1-img">
@@ -385,7 +504,7 @@
             </div>
         </div>
 
-        <!--project-3------------------------------------------------->
+        <!--tasks-3------------------------------------------------->
         <div class="col align-self-start row common proj-3 revealProductstoLeft">
             <div class="project-1-img  col-12 col-sm-12 col-md-8 col-lg-8" style="margin-bottom: 10px">
                 <div id="card3-img" class="card1-img">
@@ -455,7 +574,7 @@
             </div>
         </div>
 
-        <!--project-4------------------------------------------------->
+        <!--tasks-4------------------------------------------------->
         <div class="col align-self-end row common proj-3 revealProductstoRight">
             <div class="project-1-img  col-12 col-sm-12 col-md-8 col-lg-8" style="margin-bottom: 10px">
                 <div id="card4-img" class="card1-img">
@@ -543,6 +662,35 @@
 
 <div class="contextBorder cursor"></div>
 <div class="contextBorder cursor2"></div>
+
+<!-- projects ------------------------------------------------------------------------------------------->
+<script>
+    window.addEventListener('click', function (e) {
+        if (document.getElementById('btClick1').contains(e.target)) {
+            document.getElementById('proj1').style.display = 'block';
+        }
+
+        if (document.getElementById('btClose1').contains(e.target)) {
+            document.getElementById('proj1').style.display = 'none';
+        }
+
+        if (document.getElementById('btClick2').contains(e.target)) {
+            document.getElementById('proj2').style.display = 'block';
+        }
+
+        if (document.getElementById('btClose2').contains(e.target)) {
+            document.getElementById('proj2').style.display = 'none';
+        }
+
+        if (document.getElementById('btClick3').contains(e.target)) {
+            document.getElementById('proj3').style.display = 'block';
+        }
+
+        if (document.getElementById('btClose3').contains(e.target)) {
+            document.getElementById('proj3').style.display = 'none';
+        }
+    })
+</script>
 
 <script>
     var cursor = document.querySelector(".cursor");
