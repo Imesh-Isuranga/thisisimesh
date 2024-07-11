@@ -1,0 +1,1236 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.revealProductstoLeft{
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+
+.revealProductstoLeft.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.revealProductstoRight{
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+
+.revealProductstoRight.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: rgb(10,3,3);
+    background: radial-gradient(circle, rgba(10,3,3,1) 0%, rgba(82,4,4,1) 100%);
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .1s;
+}
+
+
+
+.cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border: 1px solid white;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .15s;
+}
+
+
+
+.navbar{
+    width: 100vw;
+    height: auto;
+    border-bottom: 1px solid white;
+}
+
+.navbar.light{
+    width: 100vw;
+    height: auto;
+    border-bottom: 1px solid black;
+}
+
+.context.light a{
+    color: black;
+}
+
+.context a{
+    color: white;
+}
+
+
+.context{
+    color: white;
+}
+
+.contextBorder{
+    border: 1px solid white;
+}
+
+.contextBorder:before{
+    background-color: white;
+}
+
+.common:hover{
+    box-shadow: 0px 0px 20px 1px white;
+}
+
+.common{
+    box-shadow: 0px 0px 5px 0px black;
+}
+
+.navigateToTopOfPage{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 50px;
+    z-index: 1;
+}
+
+/*TOP BAR---------------------------------------------------------------------------*/
+.top-bar{
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-left{
+    height: 60%;
+    background-image: url("assets/Imesh_Isuranga-removebg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 3em;
+}
+
+.top-right{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMedia{
+    height: auto;
+    width: 500px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 20px;
+}
+
+.sm{
+    height: 40px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github{
+    background-image: url("assets/Icons/github-1.png");
+    border: 1px solid white;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.linkdein{
+    background-image: url("assets/Icons/linkedin.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.stackoverflow{
+    background-image: url("assets/Icons/social.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.twitter{
+    background-image: url("assets/Icons/twitter.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.fb{
+    background-image: url("assets/Icons/facebook.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.insta{
+    background-image: url("assets/Icons/instagram.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.medium{
+    background-image: url("assets/Icons/medium.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.topHeadTxt{
+    font-size: 90px;
+    line-height: 90px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Encode Sans', sans-serif;
+}
+
+.top-text{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-scrolBtn{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#scrollBtn{
+    height: 120px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3em;
+}
+
+#scrollBtn:before{
+    content: "";
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 50%;
+    animation: move-down 2s infinite;
+}
+
+@keyframes move-down {
+    80%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(4.0em);
+        opacity: 0;
+    }
+}
+
+.top-scrolBtn p{
+    text-align: left;
+    font-size: 20px;
+}
+
+#dark-change{
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 45px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+#dark-change:before{
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background: white;
+    border: 1px solid red;
+    position: relative;
+    left: -10px;
+    transition: 0.4s;
+}
+
+#dark-change.active:before{
+    left: 10px;
+    background: rgb(10,3,3);
+    background: radial-gradient(circle, rgba(10,3,3,1) 0%, rgba(82,4,4,1) 100%);
+}
+
+body.light{
+    background: white;
+    color: white;
+}
+
+.context.light{
+    color: black;
+}
+
+.contextBorder.light{
+    border: 1px solid black;
+}
+
+.contextBorder.light:before{
+    background-color: black;
+}
+
+.common.light:hover{
+    box-shadow: 0px 0px 20px 1px black;
+}
+
+.common.light{
+    box-shadow: 0px 0px 5px 0px white;
+}
+
+/*aboutMe------------------------------------------------------------------------*/
+
+.aboutMe{
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 20px;
+}
+
+.aboutMe-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.aboutMe-left-img{
+    background-image: url("assets/about Me-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+    border-radius: 3em;
+}
+
+.aboutMe-left-text{
+    text-align: left;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Encode Sans', sans-serif;
+    margin-bottom: 50px;
+}
+
+.aboutMe-right{
+    height: 100%;
+    margin: 0px 20px 0 20px;
+}
+
+.aboutmeTxt{
+    font-size: 18px;
+    text-align: start;
+}
+
+.aboutmelist{
+    font-size: 17.5px;
+    text-align: start;
+}
+
+/*Technical Skill-----------------------------------------------------------------------------*/
+
+.Technical-Skill-text{
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 120px;
+    text-align: left;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Encode Sans', sans-serif;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.html{
+    background-image: url("assets/Stack/Frontend/html.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.css{
+    background-image: url("assets/Stack/Frontend/Css.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.javascript{
+    background-image: url("assets/Stack/Frontend/js.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.angular{
+    background-image: url("assets/Stack/Frontend/angular.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bootstrap{
+    background-image: url("assets/Stack/Frontend/bootstrap.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.spring{
+    background-image: url("assets/Stack/Backend/spring.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.node{
+    background-image: url("assets/Stack/Backend/node.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mysql{
+    background-image: url("assets/Stack/Database/mysql.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mongodb{
+    background-image: url("assets/Stack/Database/mongodb.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.firebase{
+    background-image: url("assets/Stack/Database/firebase.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.flutter{
+    background-image: url("assets/Stack/Mobile/flutter.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.android{
+    background-image: url("assets/Stack/Mobile/android.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*Projects---------------------------------------------------------------------------------*/
+
+.projects{
+    overflow: hidden;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.projects-left{
+    width: 100%;
+    height: auto;
+}
+
+.projects-right{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projectsTitle{
+    text-align: left;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Encode Sans', sans-serif;
+    margin: 0;
+}
+
+#description{
+    height: auto;
+    font-size: 20px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.preview-projects{
+    width: 100%;
+    padding: 31%;
+    box-shadow: 16px 14px 20px black;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.preview-projects:before{
+    content: "";
+    background-image: conic-gradient(#0984e3 20deg,transparent 300%);
+    width: 180%;
+    height: 40%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.preview-projects:after{
+    content: "";
+    width: 99%;
+    padding: 30.5%;
+    background-image: url("assets/Box_Imgs/1-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.project-1{
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-1 .common{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 20px;
+    transition: 1s;
+    max-width: 1000px;
+    width: auto;
+}
+
+.card-img-top{
+    height: 700px;
+    width: 200px;
+}
+
+.text1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#card1-body{
+    display: flex;
+}
+
+#card2-body{
+    display: flex;
+}
+
+#card1-img img{
+    height: 88vh;
+    width: auto;
+}
+
+#card2-img img{
+    height: 58vh;
+    width: auto;
+}
+
+#card3-img img{
+    height: 58vh;
+    width: auto;
+}
+
+#card4-img img{
+    height: 58vh;
+    width: auto;
+}
+
+
+.text2{
+    font-size: 18px;
+}
+
+.text3{
+    font-size: 15px;
+}
+
+.common{
+    background: -moz-linear-gradient(90deg, red, white, blue);
+}
+
+.common:hover{
+    transform: scale(0.95);
+}
+
+.div{
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*contact------------------------------------------------------------*/
+
+.contact{
+    width: 100vw;
+    height: 80vh;
+    margin: 20px;
+    overflow: hidden;
+}
+
+
+.contact-title{
+    height: 10vh;
+}
+
+.contactTitle{
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Encode Sans', sans-serif;
+}
+
+.contact-left{
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.contact-right{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stack-outer{
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: right;
+}
+
+.conTxt{
+    height: 50px;
+    font-size: 16px;
+}
+
+.formDiv{
+    height: 85%;
+    width: 85%;
+}
+
+.formTitle{
+    height: 10%;
+    font-size: 40px;
+}
+
+.form{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.cont{
+    padding: 7px;
+    margin-top: 10px;
+}
+
+/*footer--------------------------------------------------------------------------------------*/
+
+.footer{
+    width: 100vw;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 768px) {
+
+    .navigateToTopOfPage{
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        font-size: 45px;
+        z-index: 1;
+    }
+
+    /*TOP BAR---------------------------------------------------------------------------*/
+    .top-bar{
+        padding-top: 20px;
+    }
+
+    .top-text{
+        margin-top: 50px;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .socialMedia{
+        height: auto;
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 0px;
+    }
+
+    .sm{
+        height: 40px;
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .top-left{
+        height: 40vh;
+        background-image: url("assets/Imesh_Isuranga-removebg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 3em;
+        margin-bottom: 40px;
+    }
+
+    .top-right{
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: -50px;
+    }
+
+    .top-right .top-text p{
+        font-size: 45px;
+        line-height: 50px;
+        padding-bottom: 22px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    #scrollBtn{
+        height: 80px;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3em;
+    }
+
+    #scrollBtn:before{
+        content: "";
+        height: 1.0em;
+        width: 1.0em;
+        border-radius: 50%;
+        animation: move-down 2s infinite;
+    }
+
+    @keyframes move-down {
+        80%{
+            opacity: 0.5;
+        }
+        100%{
+            transform: translateY(2em);
+            opacity: 0;
+        }
+    }
+
+    #dark-change{
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+        width: 45px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid black;
+        border-radius: 20px;
+    }
+
+    /*AboutMe--------------------------------------------*/
+    .aboutMe{
+        height: auto;
+        min-height: 100vh;
+        width: 100vw;
+        padding: 10px;
+    }
+
+    .aboutMe-left-text{
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Encode Sans', sans-serif;
+    }
+
+    .aboutMe-right{
+        height: auto;
+        font-size: 15px;
+        padding-top: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .aboutMe-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .aboutMe-left-img{
+        background-image: url("assets/about Me-1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        width: 100%;
+    }
+
+    /*Technical Skill-----------------------------------------------------------------------------*/
+
+    .Technical-Skill-text{
+        margin-left: 20px;
+        margin-top: 20px;
+        height: 120px;
+        text-align: left;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Encode Sans', sans-serif;
+    }
+
+
+
+    /*Projects---------------------------------------------------------------------------------*/
+
+    .projects{
+        overflow: hidden;
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;;
+    }
+
+    .projects-right{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projects-left{
+        width: 100%;
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    #projectsTitle{
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Encode Sans', sans-serif;
+    }
+
+    #description{
+        height: auto;
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    .text1{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .text2{
+        font-size: 20px;
+    }
+
+    .card-img-top{
+        height: 700px;
+        width: 30px;
+    }
+
+    #card1-img img{
+        height: 58vh;
+        width: auto;
+    }
+
+    #card2-img img{
+        height: 48vh;
+        width: auto;
+    }
+
+    #card3-img img{
+        height: 48vh;
+        width: auto;
+    }
+
+    #card4-img img{
+        height: 48vh;
+        width: auto;
+    }
+
+    .div{
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /*contact------------------------------------------------------------*/
+    .contact{
+        width: 100vw;
+        height: 90vh;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contact-title{
+        height: 10vh;
+    }
+
+    .contactTitle{
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Encode Sans', sans-serif;
+    }
+
+    .contact-left{
+        height: 50%;
+    }
+
+    .contact-right{
+        height: 50%;
+    }
+
+    .stack-outer{
+        height: 50px;
+        font-size: 25px;
+        display: flex;
+        justify-content: right;
+    }
+
+    .conTxt{
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .formTitle{
+        height: 10%;
+        font-size: 30px;
+    }
+
+    .formDiv{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .formTitle{
+        width: 40%;
+        height: 100%;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px;
+    }
+
+    .form{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cont{
+        padding: 5px;
+        margin-top: 1px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    /*TopBar----------------------------------------------*/
+
+    .top-left{
+        height: 30vh;
+        background-image: url("assets/Imesh_Isuranga-removebg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 3em;
+        margin-bottom: 80px;
+    }
+
+    .top-right .top-text p{
+        margin-bottom: 40px;
+        font-size: 40px;
+        line-height: 50px;
+        padding-bottom: 45px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        font-family: 'Encode Sans', sans-serif;
+    }
+
+
+    .socialMedia{
+        height: auto;
+        width: 350px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        position: relative;
+        left: 0px;
+    }
+
+    .sm{
+        height: 30px;
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /*aboutMe-----------------------------------------------------------------------*/
+
+
+
+    .aboutMe-left-img{
+        background-image: url("assets/about Me-1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 250px;
+        width: 100%;
+    }
+
+
+    /*Projects---------------------------------------------------------------------------------*/
+    .projects{
+        overflow: hidden;
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .projects-left{
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .projects-right{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .text1{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .text2{
+        font-size: 15px;
+    }
+
+    .card-img-top{
+        height: 400px;
+        width: 25px;
+    }
+
+    #card1-img img{
+        height: 48vh;
+        width: auto;
+    }
+
+    #card2-img img{
+        height:22vh;
+        width: auto;
+    }
+
+    #card3-img img{
+        height: 22vh;
+        width: auto;
+    }
+
+    #card4-img img{
+        height: 22vh;
+        width: auto;
+    }
+
+    .text3{
+        font-size: 10px;
+    }
+
+    .div{
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /*contact------------------------------------------------------------*/
+
+    .formDiv{
+        height: 90%;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .formTitle{
+        width: auto;
+        height: 90%;
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    .form{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .cont{
+        padding: 2px;
+        margin-top: 1px;
+    }
+
+
+}
